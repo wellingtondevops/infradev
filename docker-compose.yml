@@ -12,7 +12,7 @@ services:
   #       - '15673:15672'
   #   image: 'rabbitmq:management'
   api-main:
-    image: archiocloud/archiomaster:01
+    image: archiocloud/archiomaster:02
     ports:
       - "3000:3000"
     # depends_on: 
