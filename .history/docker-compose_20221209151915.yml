@@ -11,8 +11,7 @@ services:
             - '5672:5672'
             - '15672:15672'
         image: 'rabbitmq:management'
-    # api-processs:
-    #     image: archiocloud/develop:process-index-v05  
+
     redis:
         image: redis
         container_name: cache

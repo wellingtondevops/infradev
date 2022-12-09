@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+    # rabbitmq:
+    #     container_name: same-rabbit
+    #     environment:
+    #         - RABBITMQ_DEFAULT_USER=archio
+    #         - RABBITMQ_DEFAULT_PASS=archio
+    #     # volumes:
+    #     #     - '/wellingtonoliveira@Wellingtons-MacBook-Air infradev/data:/var/lib/rabbitmq'
+    #     ports:
+    #         - '5672:5672'
+    #         - '15672:15672'
+    #     image: 'rabbitmq:management'
+
+    ocr1:
+        image: archiocloud/develop:archio-ocrlocal-v1
+        container_name: ocr1
+        ports:
+            - '7001:7000'
+    ocr2:
+        image: archiocloud/develop:archio-ocrlocal-v1
+        container_name: ocr2
+        ports:
+            - '7002:6000'
+    sign1:
+        image: archiocloud/develop:archio-signlocal-v1 
+        container_name: sign1
+        ports:
+            - '7002:6000'        
