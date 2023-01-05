@@ -5,16 +5,16 @@ services:
         container_name: ocr1
         ports:
             - '7001:7000'
-    # ocr2:
-    #     image: archiocloud/develop:archio-ocrlocal-v7
-    #     container_name: ocr2
-    #     ports:
-    #         - '7002:6000'
-    # ocr3:
-    #     image: archiocloud/develop:archio-ocrlocal-v7
-    #     container_name: ocr3
-    #     ports:
-    #         - '7003:5000'
+    ocr2:
+        image: archiocloud/develop:archio-ocrlocal-v7
+        container_name: ocr2
+        ports:
+            - '7002:6000'
+    ocr3:
+        image: archiocloud/develop:archio-ocrlocal-v7
+        container_name: ocr3
+        ports:
+            - '7003:5000'
                     
     # sign1:
     #     image: archiocloud/develop:archio-signlocal-v1 
