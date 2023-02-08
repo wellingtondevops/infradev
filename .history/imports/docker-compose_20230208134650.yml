@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+    # rabbitmq:
+    #     container_name: same-rabbit
+    #     environment:
+    #         - RABBITMQ_DEFAULT_USER=archio
+    #         - RABBITMQ_DEFAULT_PASS=archio
+    #     # volumes:
+    #     #     - '/wellingtonoliveira@Wellingtons-MacBook-Air infradev/data:/var/lib/rabbitmq'
+    #     ports:
+    #         - '5672:5672'
+    #         - '15672:15672'
+    #     image: 'rabbitmq:management'
+    archio:
+        image: redis
+        container_name: archio
+        ports:
+            - '3000:3000'
+
+    redis:
+        image: redis
+        container_name: cache
+        ports:
+            - '6379:6379'
